@@ -14,7 +14,7 @@ import "@fontsource/barlow-condensed";
 import "@fontsource/bellefair";
 import bg from "../assets/background-home-desktop.jpg";
 import logo from "../assets/shared/logo.svg";
-import React, { useState } from "react";
+import React from "react";
 
 function App() {
 	return (
@@ -65,7 +65,7 @@ function App() {
 									<Link href="/">
 										<Text as="strong" color="white">
 											00
-										</Text>
+										</Text>{" "}
 										HOME
 									</Link>
 								</ListItem>
@@ -73,7 +73,7 @@ function App() {
 									<Link href="/">
 										<Text as="strong" color="#FFFFFF">
 											01
-										</Text>
+										</Text>{" "}
 										DESTINATION
 									</Link>
 								</ListItem>
@@ -81,7 +81,7 @@ function App() {
 									<Link href="/">
 										<Text as="strong" color="#FFFFFF">
 											02
-										</Text>
+										</Text>{" "}
 										CREW
 									</Link>
 								</ListItem>
@@ -89,7 +89,7 @@ function App() {
 									<Link href="/">
 										<Text as="strong" color="#FFFFFF">
 											03
-										</Text>
+										</Text>{" "}
 										TECHNOLOGY
 									</Link>
 								</ListItem>
@@ -141,6 +141,12 @@ function App() {
 						fontSize="3xl"
 						alignSelf="flex-end"
 						fontWeight="400"
+						transition="all .4s ease-out"
+						_hover={{
+							transform: "scale(0.70)",
+							outline: "60px #FFFFFF30 solid",
+							outlineOffset: "0px"
+						}}
 					>
 						EXPLORE
 					</Button>
