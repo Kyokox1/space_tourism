@@ -1,26 +1,19 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Routes, Route } from "react-router-dom";
 import "@fontsource/barlow";
 import "@fontsource/barlow-condensed";
 import "@fontsource/bellefair";
-import bg from "../assets/background-home-desktop.jpg";
 import { Header } from "./Header";
 import { Home } from "./pages/Home";
+import { Destination } from "./pages/Destination";
 
 function App() {
 	return (
 		<>
-			<Box
-				bgImg={bg}
-				bgSize="cover"
-				color="white"
-				height="100vh"
-				pt="2.5rem"
-			>
-				<Header />
-				{/* Body */}
-				<Home />
-			</Box>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/destination" element={<Destination />} />
+			</Routes>
 		</>
 	);
 }

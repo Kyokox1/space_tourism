@@ -1,15 +1,16 @@
 import React from "react";
-import logo from "../assets/shared/logo.svg";
+import { Link } from "react-router-dom";
 import {
 	Heading,
 	Image,
-	Link,
 	ListItem,
 	Flex,
 	Box,
 	Text,
 	UnorderedList
 } from "@chakra-ui/react";
+import logo from "../assets/shared/logo.svg";
+// Todo abstraer el nabvar y agregar hover y active
 
 export const Header = () => {
 	return (
@@ -49,7 +50,7 @@ export const Header = () => {
 						letterSpacing="2.7px"
 					>
 						<ListItem>
-							<Link href="/">
+							<Link to="/">
 								<Text as="strong" color="white">
 									00
 								</Text>{" "}
@@ -57,7 +58,7 @@ export const Header = () => {
 							</Link>
 						</ListItem>
 						<ListItem>
-							<Link href="/">
+							<Link to="/destination">
 								<Text as="strong" color="#FFFFFF">
 									01
 								</Text>{" "}
@@ -65,7 +66,7 @@ export const Header = () => {
 							</Link>
 						</ListItem>
 						<ListItem>
-							<Link href="/">
+							<Link to="/crew">
 								<Text as="strong" color="#FFFFFF">
 									02
 								</Text>{" "}
@@ -73,7 +74,7 @@ export const Header = () => {
 							</Link>
 						</ListItem>
 						<ListItem>
-							<Link href="/">
+							<Link to="/technology">
 								<Text as="strong" color="#FFFFFF">
 									03
 								</Text>{" "}
