@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import "@fontsource/barlow";
 import "@fontsource/barlow-condensed";
 import "@fontsource/bellefair";
-import { Header } from "./Header";
 import { Home } from "./pages/Home";
 import { Destination } from "./pages/Destination";
 
@@ -12,7 +11,7 @@ function App() {
 		<>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/destination" element={<Destination />} />
+				<Route path="/destination/*" element={<Destination />} />
 			</Routes>
 		</>
 	);

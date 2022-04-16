@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Box, Flex, Text } from "@chakra-ui/react";
 import bgHome from "../../assets/background-home-desktop.jpg";
-import { Header } from "../Header";
+import { Header } from "../sections/Header";
 import { Link } from "react-router-dom";
 
 export const Home = () => {

@@ -9,7 +9,7 @@ import {
 	Text,
 	UnorderedList
 } from "@chakra-ui/react";
-import logo from "../assets/shared/logo.svg";
+import logo from "../../assets/shared/logo.svg";
 // Todo abstraer el nabvar y agregar hover y active
 
 export const Header = () => {
