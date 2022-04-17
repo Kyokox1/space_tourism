@@ -1,11 +1,14 @@
-
-const API = "./src/data.json"; 
+const API = "./src/data.json";
 
 export const fetchApi = async (key) => {
-	const response = await fetch(API);
-	const json = await response.json();
-	const data = await json[key];
-	return data;
+	try {
+		const response = await fetch(API);
+		const json = await response.json();
+		const data = await json[key];
+		return data;
+	} catch (error) {
+		console.log(error);
+	}
 };
 
 // ?La siguiente manera es para extraer datos de una API falsa con JsonServer

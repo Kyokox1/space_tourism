@@ -1,8 +1,10 @@
 import React from "react";
 import { Button, Box, Flex, Text } from "@chakra-ui/react";
-import bgHome from "../../assets/background-home-desktop.jpg";
+
 import { Header } from "../sections/Header";
 import { Link } from "react-router-dom";
+
+import bgHome from "../../assets/background-home-desktop.jpg";
 
 export const Home = () => {
 	return (
@@ -13,6 +15,7 @@ export const Home = () => {
 				color="white"
 				height="100vh"
 				pt="2.5rem"
+				overflowY="hidden"
 			>
 				<Header />
 				<Flex
