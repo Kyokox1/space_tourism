@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button, Box, Flex, Text } from "@chakra-ui/react";
 
 import { Header } from "../sections/Header";
-import { Link } from "react-router-dom";
 
 import bgHome from "../../assets/background-home-desktop.jpg";
 
