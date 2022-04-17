@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { Home } from "./pages/Home";
 import { Destination } from "./pages/Destination";
+import { Crew } from "./pages/Crew";
 
 import "@fontsource/barlow";
 import "@fontsource/barlow-condensed";
@@ -13,7 +14,8 @@ function App() {
 		<>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/destination" element={<Destination />} />
+				<Route path="destination" element={<Destination />} />
+				<Route path="crew" element={<Crew />} />
 			</Routes>
 		</>
 	);
