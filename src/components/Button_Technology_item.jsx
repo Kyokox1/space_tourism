@@ -1,10 +1,15 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 
-export const ButtonTechnologyItem = ({ number, slideTechnology }) => {
+export const ButtonTechnologyItem = ({
+	number,
+	slideTechnology,
+	index
+}) => {
 	return (
 		<Box
 			as="button"
+			autoFocus={index === 0 && true}
 			onClick={slideTechnology}
 			variant="outline"
 			height="5rem"

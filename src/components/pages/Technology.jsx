@@ -32,13 +32,8 @@ export const Technology = () => {
 			<TitleItem title="SPACE LAUNCH 101" number="03" />
 
 			{technology.length === 0 ? (
-				<Text
-					textAlign="center"
-					fontFamily="Bellefair"
-					fontSize="4xl"
-				>
-					Cargando...{" "}
-					<Spinner as="span" color="white.500" size="lg" />
+				<Text textAlign="center" fontFamily="Bellefair" fontSize="4xl">
+					Cargando... <Spinner as="span" color="white.500" size="lg" />
 				</Text>
 			) : (
 				<Flex
@@ -60,15 +55,13 @@ export const Technology = () => {
 									key={i}
 									number={i + 1}
 									slideTechnology={() => setTechnologyValues(i)}
+									index={i}
 								/>
 							))}
 					</Flex>
 
 					<Box>
-						<Text
-							letterSpacing="4.75px"
-							fontFamily="Barlow Condensed"
-						>
+						<Text letterSpacing="4.75px" fontFamily="Barlow Condensed">
 							THE TERMINOLOGY...
 						</Text>
 						<Text fontSize="5xl">

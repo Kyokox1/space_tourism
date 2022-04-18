@@ -42,13 +42,8 @@ export const Crew = () => {
 			<TitleItem title={"PICK YOUR CREW"} number={"02"} />
 
 			{crew.length === 0 ? (
-				<Text
-					textAlign="center"
-					fontFamily="Bellefair"
-					fontSize="4xl"
-				>
-					Cargando...{" "}
-					<Spinner as="span" color="white.500" size="lg" />
+				<Text textAlign="center" fontFamily="Bellefair" fontSize="4xl">
+					Cargando... <Spinner as="span" color="white.500" size="lg" />
 				</Text>
 			) : (
 				<Flex
@@ -57,17 +52,13 @@ export const Crew = () => {
 					m="0 auto"
 					justifyContent="space-around"
 				>
-					<Flex
-						flexDir="column"
-						width="60%"
-						justifyContent="space-evenly"
-					>
+					<Flex flexDir="column" width="60%" justifyContent="space-evenly">
 						<Flex justifyContent="center" gap="1rem" flexDir="column">
 							<Text color="#D0D6F990" fontSize="3xl">
 								{crew[crewValues].role.toUpperCase()}{" "}
 							</Text>
 							<Text fontSize="5xl">
-								{crew[crewValues].name.toUpperCase()}{" "}
+								{crew[crewValues].name.toUpperCase()}
 							</Text>
 							<Text color="#D0D6F9" fontFamily="Barlow" width="75%">
 								{crew[crewValues].bio}{" "}

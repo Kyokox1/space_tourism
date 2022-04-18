@@ -17,7 +17,6 @@ export const DestinationItem = ({
 	travel,
 	setPlanetValues
 }) => {
-	
 	// *Animacion de rotacion
 	const animationKeyframes = keyframes`
 		0% { transform: scale(1) rotate(0) }

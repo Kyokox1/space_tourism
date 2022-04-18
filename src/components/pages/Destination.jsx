@@ -30,13 +30,8 @@ export const Destination = () => {
 			<Header />
 			<TitleItem title={"PICK YOUR DESTINATION"} number={"01"} />
 			{planets.length === 0 ? (
-				<Text
-					textAlign="center"
-					fontFamily="Bellefair"
-					fontSize="4xl"
-				>
-					Cargando...{" "}
-					<Spinner as="span" color="white.500" size="lg" />
+				<Text textAlign="center" fontFamily="Bellefair" fontSize="4xl">
+					Cargando... <Spinner as="span" color="white.500" size="lg" />
 				</Text>
 			) : (
 				<DestinationItem
