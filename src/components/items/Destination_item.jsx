@@ -32,6 +32,7 @@ export const DestinationItem = ({
 				src={img}
 				boxSize="sm"
 				animation={animation}
+				alt="destination"
 			/>
 			<Box boxSize="md">
 				<Box

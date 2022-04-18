@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 import { Header } from "../sections/Header";
-import { TitleItem } from "../Title_item";
+import { TitleItem } from "../items/Title_item";
 import { fetchApi } from "../../services/fetchAPI";
 
 import bgCrew from "../../assets/crew/background-crew-desktop.jpg";
@@ -25,8 +25,6 @@ export const Crew = () => {
 	useEffect(() => {
 		fetchApi(key).then(setCrew);
 	}, []);
-
-	console.log(crew);
 
 	return (
 		<Box
@@ -107,6 +105,7 @@ export const Crew = () => {
 						objectFit="contain"
 						mt="-5rem"
 						width="50%"
+						alt="crew"
 					/>
 				</Flex>
 			)}

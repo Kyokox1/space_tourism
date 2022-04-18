@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Box, Spinner, Text } from "@chakra-ui/react";
 
 import { Header } from "../sections/Header";
-import { DestinationItem } from "../Destination_item";
-import { TitleItem } from "../Title_item";
+import { DestinationItem } from "../items/Destination_item";
+import { TitleItem } from "../items/Title_item";
 import { fetchApi } from "../../services/fetchAPI";
 
 import bgDestination from "../../assets/destination/background-destination-desktop.jpg";
