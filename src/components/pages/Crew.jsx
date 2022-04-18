@@ -59,7 +59,7 @@ export const Crew = () => {
 				>
 					<Flex
 						flexDir="column"
-						width="50%"
+						width="60%"
 						justifyContent="space-evenly"
 					>
 						<Flex justifyContent="center" gap="1rem" flexDir="column">
@@ -69,7 +69,7 @@ export const Crew = () => {
 							<Text fontSize="5xl">
 								{crew[crewValues].name.toUpperCase()}{" "}
 							</Text>
-							<Text color="#D0D6F9" fontFamily="Barlow" width="80%">
+							<Text color="#D0D6F9" fontFamily="Barlow" width="75%">
 								{crew[crewValues].bio}{" "}
 							</Text>
 						</Flex>
