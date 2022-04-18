@@ -36,6 +36,7 @@ export const Crew = () => {
 			height="100vh"
 			pt="2.5rem"
 			overflowY="hidden"
+			fontFamily="Bellefair"
 		>
 			<Header />
 			<TitleItem title={"PICK YOUR CREW"} number={"02"} />
