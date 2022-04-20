@@ -28,7 +28,7 @@ export const Header = () => {
 					width="30rem"
 					zIndex="900"
 					bg="#ffffff"
-					opacity=".25"
+					opacity={{ lg: ".25", md: "0", base: "0" }}
 					ml="100px"
 					justifyContent="space-around"
 				></Box>
@@ -36,10 +36,10 @@ export const Header = () => {
 					<UnorderedList
 						bg="rgba(255, 255, 255, 0.04)"
 						backdropFilter="blur(81.5485px)"
-						width="830px"
+						width="65vw"
 						fontWeight="400"
 						listStyleType="none"
-						px="4rem"
+						px={{ lg: "4rem", md: "0", base: "0" }}
 						ml="-2rem"
 						height="inherit"
 						display="flex"
@@ -52,7 +52,11 @@ export const Header = () => {
 					>
 						<ListItem>
 							<Link to="/">
-								<Text as="strong" color="white">
+								<Text
+									as="strong"
+									color="white"
+									display={{ lg: "inline", md: "none", base: "none" }}
+								>
 									00
 								</Text>{" "}
 								HOME
@@ -60,7 +64,11 @@ export const Header = () => {
 						</ListItem>
 						<ListItem>
 							<Link to="/destination">
-								<Text as="strong" color="#FFFFFF">
+								<Text
+									as="strong"
+									color="#FFFFFF"
+									display={{ lg: "inline", md: "none", base: "none" }}
+								>
 									01
 								</Text>{" "}
 								DESTINATION
@@ -68,7 +76,11 @@ export const Header = () => {
 						</ListItem>
 						<ListItem>
 							<Link to="/crew">
-								<Text as="strong" color="#FFFFFF">
+								<Text
+									as="strong"
+									color="#FFFFFF"
+									display={{ lg: "inline", md: "none", base: "none" }}
+								>
 									02
 								</Text>{" "}
 								CREW
@@ -76,7 +88,11 @@ export const Header = () => {
 						</ListItem>
 						<ListItem>
 							<Link to="/technology">
-								<Text as="strong" color="#FFFFFF">
+								<Text
+									as="strong"
+									color="#FFFFFF"
+									display={{ lg: "inline", md: "none", base: "none" }}
+								>
 									03
 								</Text>{" "}
 								TECHNOLOGY

@@ -37,20 +37,30 @@ export const Technology = () => {
 				</Text>
 			) : (
 				<Flex
+					flexDir={{
+						lg: "row",
+						md: "column-reverse",
+						base: "column-reverse"
+					}}
 					width="100vw"
-					height="24rem"
+					height={{ lg: "24rem", md: "80vh", base: "80vh" }}
 					m="0 auto"
-					justifyContent="space-between"
+					justifyContent="space-around"
 				>
-					<Box display="flex" justifyContent="space-evenly">
+					<Box
+						display="flex"
+						justifyContent="space-evenly"
+						flexDir={{ lg: "row", md: "column", base: "column" }}
+						h={{ lg: "auto", md: "50%" }}
+					>
 						<Flex
 							display="flex"
-							flexDir="column"
+							flexDir={{ lg: "column", md: "row", base: "row" }}
 							gap={7}
 							justifyContent="center"
 						>
 							{Array(3)
-								.fill("null")
+								.fill(null)
 								.map((_, i) => (
 									<ButtonTechnologyItem
 										key={i}
@@ -64,8 +74,15 @@ export const Technology = () => {
 						<Box
 							display="flex"
 							flexDir="column"
-							justifyContent="center"
-							width="50%"
+							justifyContent={{
+								lg: "center",
+								md: "space-evenly",
+								base: "space-evenly"
+							}}
+							h={{ lg: "auto", md: "60%" }}
+							m={{ lg: "0", md: "0 auto", base: "0 auto" }}
+							textAlign={{ lg: "initial", md: "center", base: "center" }}
+							w={{ lg: "50%", md: "80%", base: "80%" }}
 						>
 							<Text
 								letterSpacing="4.75px"
@@ -82,12 +99,23 @@ export const Technology = () => {
 							</Text>
 						</Box>
 					</Box>
-					<Image
-						src={technology[technologyValues].images.portrait}
-						mt="-4rem"
-						alt="techcology"
-						objectFit="none"
-					/>
+					{/* Picture se puede utilizar como MediaQuery */}
+					<Box
+						as="picture"
+						h={{ lg: "inherit", md: "30%", base: "30%" }}
+						w={{ lg: "70%", md: "inherit", base: "inherit" }}
+					>
+						<source
+							srcSet={technology[technologyValues].images.landscape}
+							media="(max-width: 990px)"
+						/>
+						<Image
+							src={technology[technologyValues].images.portrait}
+							mt={{ lg: "-4rem", md: "0", base: "0" }}
+							alt="techcology"
+							objectFit="contain"
+						/>
+					</Box>
 				</Flex>
 			)}
 		</Box>

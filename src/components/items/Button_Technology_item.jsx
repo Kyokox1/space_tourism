@@ -12,8 +12,7 @@ export const ButtonTechnologyItem = ({
 			autoFocus={index === 0 && true}
 			onClick={slideTechnology}
 			variant="outline"
-			height="5rem"
-			width="5rem"
+			boxSize={{ lg: "5rem", md: "4rem", base: "4rem" }}
 			fontFamily="Bellefair"
 			transition="all 0.3s cubic-bezier(.08,.52,.52,1)"
 			border="1px"

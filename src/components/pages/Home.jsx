@@ -14,14 +14,17 @@ export const Home = () => {
 				bgSize="cover"
 				color="white"
 				height="100vh"
-				pt="2.5rem"
+				pt={{ lg: "2.5rem", md: "0", base: "0" }}
 				overflowY="hidden"
 			>
 				<Header />
 				<Flex
 					as="section"
-					justifyContent="space-between"
-					width="5xl"
+					justifyContent="space-evenly"
+					flexDir={{ md: "column", lg: "row", base: "column" }}
+					alignItems={{ md: "center", base: "center" }}
+					height={{ lg: "auto", md: "3xl", base: "3xl" }}
+					width="100%"
 					m="9.5rem auto 0 auto"
 					fontWeight="300"
 					color="#D0D6F9"
