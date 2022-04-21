@@ -24,7 +24,7 @@ export const Technology = () => {
 			bgSize="cover"
 			color="white"
 			height="100vh"
-			pt="2.5rem"
+			pt={{ lg: "2.5rem", md: "0", base: "0" }}
 			overflowY="hidden"
 			fontFamily="Bellefair"
 		>
@@ -114,6 +114,7 @@ export const Technology = () => {
 							mt={{ lg: "-4rem", md: "0", base: "0" }}
 							alt="techcology"
 							objectFit="contain"
+							m="0 auto"
 						/>
 					</Box>
 				</Flex>
