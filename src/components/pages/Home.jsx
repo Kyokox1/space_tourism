@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Box, Flex, Text, Image } from "@chakra-ui/react";
+import { Button, Box, Flex, Text } from "@chakra-ui/react";
 
 import { Header } from "../sections/Header";
 

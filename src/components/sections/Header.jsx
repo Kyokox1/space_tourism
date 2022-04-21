@@ -1,19 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-	Heading,
-	Image,
-	ListItem,
-	Flex,
-	Box,
-	Text,
-	UnorderedList
-} from "@chakra-ui/react";
+import { Heading, Image, Flex, Box } from "@chakra-ui/react";
 
-import logo from "../../assets/shared/logo.svg";
 import { NavMobile } from "./NavMobile_item";
 import { NavDesktop } from "./NavDesktop_item";
-// Todo abstraer el nabvar y agregar hover y active
+
+import logo from "../../assets/shared/logo.svg";
 
 export const Header = () => {
 	return (
