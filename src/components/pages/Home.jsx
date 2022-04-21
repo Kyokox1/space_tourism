@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Box, Flex, Text } from "@chakra-ui/react";
+import { Button, Box, Flex, Text, Image } from "@chakra-ui/react";
 
 import { Header } from "../sections/Header";
 
 import bgHome from "../../assets/background-home-desktop.jpg";
+import bgHomeTablet from "../../assets/background-home-tablet.jpg";
+import bgHomeMobile from "../../assets/background-home-mobile.jpg";
 
 export const Home = () => {
 	return (
 		<>
 			<Box
-				bgImg={bgHome}
+				bgImg={{ lg: bgHome, md: bgHomeTablet, base: bgHomeMobile }}
 				bgSize="cover"
 				color="white"
 				height="100vh"
@@ -23,24 +25,25 @@ export const Home = () => {
 					justifyContent="space-evenly"
 					flexDir={{ md: "column", lg: "row", base: "column" }}
 					alignItems={{ md: "center", base: "center" }}
-					height={{ lg: "auto", md: "3xl", base: "3xl" }}
-					width="100%"
-					m="9.5rem auto 0 auto"
+					h={{ lg: "auto", md: "4xl", base: "xl" }}
+					w="100%"
+					m={{ lg: "9.5rem auto 0 auto", md: "1rem auto", base: "0" }}
 					fontWeight="300"
 					color="#D0D6F9"
+					textAlign={{ lg: "initial", md: "center", base: "center" }}
 				>
-					<Box width="md">
+					<Box w={{ lg: "md", md: "md", base: "90%" }}>
 						<Text
 							as="h3"
 							fontFamily="Barlow Condensed"
-							fontSize="2xl"
+							fontSize={{ lg: "2xl", md: "2xl", base: "lg" }}
 							letterSpacing={5}
 						>
 							SO, YOU WANT TO TRAVEL TO
 						</Text>
 						<Text
 							as="h1"
-							fontSize="9xl"
+							fontSize={{ lg: "9xl", md: "9xl", base: "8xl" }}
 							fontFamily="Bellefair"
 							textAlign="center"
 							letterSpacing={7}
@@ -48,7 +51,12 @@ export const Home = () => {
 						>
 							SPACE
 						</Text>
-						<Text as="p" fontFamily="Barlow" fontSize="md" mt="-1rem">
+						<Text
+							as="p"
+							fontFamily="Barlow"
+							fontSize={{ lg: "lg", md: "xl", base: "md" }}
+							mt="-1rem"
+						>
 							Let’s face it; if you want to go to space, you might as well
 							genuinely go to outer space and not hover kind of on the edge
 							of it. Well sit back, and relax because we’ll give you a
@@ -58,8 +66,7 @@ export const Home = () => {
 					<Link to="/destination">
 						<Button
 							borderRadius="50%"
-							width="274px"
-							height="274px"
+							boxSize={{ lg: "274px", md: "274px", base: "200px" }}
 							color="#0B0D17"
 							fontFamily="Bellefair"
 							fontSize="3xl"

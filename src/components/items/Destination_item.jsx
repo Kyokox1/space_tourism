@@ -132,7 +132,7 @@ export const DestinationItem = ({
 					fontFamily="Barlow"
 					color="#D0D6F9"
 					m={{ lg: "initial", md: "0 auto", base: "0 auto" }}
-					width={{ lg: "400px", md: "100%", base: "100%" }}
+					w={{ lg: "400px", md: "100%", base: "100%" }}
 					pb="2rem"
 					borderBottom="1px #383B4B solid"
 				>

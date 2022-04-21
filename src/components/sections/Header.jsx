@@ -11,13 +11,16 @@ import {
 } from "@chakra-ui/react";
 
 import logo from "../../assets/shared/logo.svg";
+import { NavMobile } from "./NavMobile_item";
+import { NavDesktop } from "./NavDesktop_item";
 // Todo abstraer el nabvar y agregar hover y active
 
 export const Header = () => {
 	return (
 		<Heading
+			zIndex="900"
 			as="header"
-			ml="3.45rem"
+			ml={{ lg: "3.45rem", md: "2.5rem", base: "1.5rem" }}
 			height="96px"
 			fontFamily="Barlow Condensed"
 		>
@@ -32,74 +35,8 @@ export const Header = () => {
 					ml="100px"
 					justifyContent="space-around"
 				></Box>
-				<Box as="nav" height="inherit">
-					<UnorderedList
-						bg="rgba(255, 255, 255, 0.04)"
-						backdropFilter="blur(81.5485px)"
-						width="65vw"
-						fontWeight="400"
-						listStyleType="none"
-						px={{ lg: "4rem", md: "0", base: "0" }}
-						ml="-2rem"
-						height="inherit"
-						display="flex"
-						color="#D0D6F9"
-						fontSize="1rem"
-						lineHeight="19px"
-						justifyContent="space-around"
-						alignItems="center"
-						letterSpacing="2.7px"
-					>
-						<ListItem>
-							<Link to="/">
-								<Text
-									as="strong"
-									color="white"
-									display={{ lg: "inline", md: "none", base: "none" }}
-								>
-									00
-								</Text>{" "}
-								HOME
-							</Link>
-						</ListItem>
-						<ListItem>
-							<Link to="/destination">
-								<Text
-									as="strong"
-									color="#FFFFFF"
-									display={{ lg: "inline", md: "none", base: "none" }}
-								>
-									01
-								</Text>{" "}
-								DESTINATION
-							</Link>
-						</ListItem>
-						<ListItem>
-							<Link to="/crew">
-								<Text
-									as="strong"
-									color="#FFFFFF"
-									display={{ lg: "inline", md: "none", base: "none" }}
-								>
-									02
-								</Text>{" "}
-								CREW
-							</Link>
-						</ListItem>
-						<ListItem>
-							<Link to="/technology">
-								<Text
-									as="strong"
-									color="#FFFFFF"
-									display={{ lg: "inline", md: "none", base: "none" }}
-								>
-									03
-								</Text>{" "}
-								TECHNOLOGY
-							</Link>
-						</ListItem>
-					</UnorderedList>
-				</Box>
+				<NavDesktop />
+				<NavMobile />
 			</Flex>
 		</Heading>
 	);
