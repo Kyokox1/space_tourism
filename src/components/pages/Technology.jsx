@@ -6,7 +6,8 @@ import { TitleItem } from "../items/Title_item";
 import { ButtonTechnologyItem } from "../items/Button_Technology_item";
 import { fetchApi } from "../../services/fetchAPI";
 
-import bgTechnology from "../../assets/technology/background-technology-desktop.jpg";
+const bgTechnology =
+	"./assets/technology/background-technology-desktop.jpg";
 
 export const Technology = () => {
 	const [technology, setTechnology] = useState([]);

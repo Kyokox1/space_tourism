@@ -4,9 +4,9 @@ import { Button, Box, Flex, Text } from "@chakra-ui/react";
 
 import { Header } from "../sections/Header";
 
-import bgHome from "../../assets/background-home-desktop.jpg";
-import bgHomeTablet from "../../assets/background-home-tablet.jpg";
-import bgHomeMobile from "../../assets/background-home-mobile.jpg";
+const bgHome = "./assets/background-home-desktop.jpg";
+const bgHomeTablet = "./assets/background-home-tablet.jpg";
+const bgHomeMobile = "./assets/background-home-mobile.jpg";
 
 export const Home = () => {
 	return (

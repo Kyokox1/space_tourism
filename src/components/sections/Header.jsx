@@ -4,7 +4,7 @@ import { Heading, Image, Flex, Box } from "@chakra-ui/react";
 import { NavMobile } from "./NavMobile_item";
 import { NavDesktop } from "./NavDesktop_item";
 
-import logo from "../../assets/shared/logo.svg";
+const logo = "./assets/shared/logo.svg";
 
 export const Header = () => {
 	return (
@@ -16,7 +16,7 @@ export const Header = () => {
 			fontFamily="Barlow Condensed"
 		>
 			<Flex alignItems="center" height="inherit">
-				<Image src={logo} width={12} />
+				<Image src={logo} w={12} />
 				<Box
 					height="1px"
 					width="30rem"

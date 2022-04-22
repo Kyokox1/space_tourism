@@ -1,4 +1,4 @@
-const API = "./src/data.json";
+const API = "./data.json";
 
 export const fetchApi = async (key) => {
 	try {

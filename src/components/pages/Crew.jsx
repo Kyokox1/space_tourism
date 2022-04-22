@@ -6,7 +6,7 @@ import { TitleItem } from "../items/Title_item";
 import { CrewItem } from "../items/Crew_item";
 import { fetchApi } from "../../services/fetchAPI";
 
-import bgCrew from "../../assets/crew/background-crew-desktop.jpg";
+const bgCrew = "./assets/crew/background-crew-desktop.jpg";
 
 export const Crew = () => {
 	const [crew, setCrew] = useState([]);

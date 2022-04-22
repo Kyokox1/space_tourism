@@ -6,7 +6,8 @@ import { DestinationItem } from "../items/Destination_item";
 import { TitleItem } from "../items/Title_item";
 import { fetchApi } from "../../services/fetchAPI";
 
-import bgDestination from "../../assets/destination/background-destination-desktop.jpg";
+const bgDestination =
+	"./assets/destination/background-destination-desktop.jpg";
 
 export const Destination = () => {
 	const [planets, setPlanets] = useState([]);
@@ -29,7 +30,7 @@ export const Destination = () => {
 		>
 			<Header />
 			<TitleItem title={"PICK YOUR DESTINATION"} number={"01"} />
-			{planets.length === 0 ? (
+			{planets?.length === 0 ? (
 				<Text textAlign="center" fontFamily="Bellefair" fontSize="4xl">
 					Cargando... <Spinner as="span" color="white.500" size="lg" />
 				</Text>
