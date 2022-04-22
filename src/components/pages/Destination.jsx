@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Box, Spinner, Text } from "@chakra-ui/react";
 
 import { Header } from "../sections/Header";
-import { DestinationItem } from "../items/Destination_item";
 import { TitleItem } from "../items/Title_item";
+import { DestinationItem } from "../items/Destination_item";
 import { fetchApi } from "../../services/fetchAPI";
 
-const bgDestination =
-	"./assets/destination/background-destination-desktop.jpg";
+import bgDestination from "/assets/destination/background-destination-desktop.jpg";
 
 export const Destination = () => {
 	const [planets, setPlanets] = useState([]);
@@ -26,7 +25,8 @@ export const Destination = () => {
 			color="white"
 			height="100vh"
 			pt={{ lg: "2.5rem", md: "0", base: "0" }}
-			overflowY="hidden"
+			overflowY={{ lg: "hidden", md: "hidden", base: "auto" }}
+			overflowX="hidden"
 		>
 			<Header />
 			<TitleItem title={"PICK YOUR DESTINATION"} number={"01"} />

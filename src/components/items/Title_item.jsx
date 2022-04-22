@@ -5,7 +5,8 @@ export const TitleItem = ({ number, title }) => {
 	return (
 		<Text
 			as="h3"
-			fontSize="3xl"
+			textAlign={{ lg: "initial", md: "center", base: "center" }}
+			fontSize={{ lg: "3xl", md: "3xl", base: "xl" }}
 			fontWeight="100"
 			letterSpacing="4.75px"
 			fontFamily="Barlow Condensed"

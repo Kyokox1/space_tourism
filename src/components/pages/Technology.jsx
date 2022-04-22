@@ -6,8 +6,7 @@ import { TitleItem } from "../items/Title_item";
 import { ButtonTechnologyItem } from "../items/Button_Technology_item";
 import { fetchApi } from "../../services/fetchAPI";
 
-const bgTechnology =
-	"./assets/technology/background-technology-desktop.jpg";
+import bgTechnology from "/assets/technology/background-technology-desktop.jpg";
 
 export const Technology = () => {
 	const [technology, setTechnology] = useState([]);
@@ -26,7 +25,7 @@ export const Technology = () => {
 			color="white"
 			height="100vh"
 			pt={{ lg: "2.5rem", md: "0", base: "0" }}
-			overflowY="hidden"
+			overflowY={{ lg: "hidden", md: "hidden", base: "auto" }}
 			fontFamily="Bellefair"
 		>
 			<Header />
@@ -43,16 +42,24 @@ export const Technology = () => {
 						md: "column-reverse",
 						base: "column-reverse"
 					}}
-					width="100vw"
-					height={{ lg: "24rem", md: "80vh", base: "80vh" }}
+					w="100vw"
+					h={{ lg: "24rem", md: "80vh", base: "39rem" }}
 					m="0 auto"
-					justifyContent="space-around"
+					justifyContent={{
+						lg: "space-around",
+						md: "space-around",
+						base: "space-evenly"
+					}}
 				>
 					<Box
 						display="flex"
-						justifyContent="space-evenly"
+						justifyContent={{
+							lg: "space-evenly",
+							md: "space-evenly",
+							base: "space-around"
+						}}
 						flexDir={{ lg: "row", md: "column", base: "column" }}
-						h={{ lg: "auto", md: "50%" }}
+						h={{ lg: "auto", md: "50%", base: "55%" }}
 					>
 						<Flex
 							display="flex"
@@ -83,7 +90,7 @@ export const Technology = () => {
 							h={{ lg: "auto", md: "60%" }}
 							m={{ lg: "0", md: "0 auto", base: "0 auto" }}
 							textAlign={{ lg: "initial", md: "center", base: "center" }}
-							w={{ lg: "50%", md: "80%", base: "80%" }}
+							w={{ lg: "50%", md: "80%", base: "90%" }}
 						>
 							<Text
 								letterSpacing="4.75px"
@@ -92,7 +99,7 @@ export const Technology = () => {
 							>
 								THE TERMINOLOGY...
 							</Text>
-							<Text fontSize="5xl">
+							<Text fontSize={{ lg: "5xl", md: "5xl", base: "4xl" }}>
 								{technology[technologyValues].name.toUpperCase()}
 							</Text>
 							<Text fontFamily="Barlow" color="#D0D6F9">
@@ -103,7 +110,7 @@ export const Technology = () => {
 					{/* Picture se puede utilizar como MediaQuery */}
 					<Box
 						as="picture"
-						h={{ lg: "inherit", md: "30%", base: "30%" }}
+						h={{ lg: "inherit", md: "30%", base: "20%" }}
 						w={{ lg: "70%", md: "inherit", base: "inherit" }}
 					>
 						<source

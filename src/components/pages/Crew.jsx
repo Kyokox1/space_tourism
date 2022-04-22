@@ -6,7 +6,7 @@ import { TitleItem } from "../items/Title_item";
 import { CrewItem } from "../items/Crew_item";
 import { fetchApi } from "../../services/fetchAPI";
 
-const bgCrew = "./assets/crew/background-crew-desktop.jpg";
+import bgCrew from "/assets/crew/background-crew-desktop.jpg";
 
 export const Crew = () => {
 	const [crew, setCrew] = useState([]);
@@ -25,7 +25,7 @@ export const Crew = () => {
 			color="white"
 			height="100vh"
 			pt={{ lg: "2.5rem", md: "0", base: "0" }}
-			overflowY="hidden"
+			overflowY={{ lg: "hidden", md: "hidden", base: "auto" }}
 			fontFamily="Bellefair"
 		>
 			<Header />

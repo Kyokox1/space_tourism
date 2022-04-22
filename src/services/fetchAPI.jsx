@@ -1,4 +1,5 @@
-const API = "./data.json";
+const API = "/data.json"
+// import ss from "./"
 
 export const fetchApi = async (key) => {
 	try {

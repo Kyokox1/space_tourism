@@ -4,7 +4,7 @@ import { Heading, Image, Flex, Box } from "@chakra-ui/react";
 import { NavMobile } from "./NavMobile_item";
 import { NavDesktop } from "./NavDesktop_item";
 
-const logo = "./assets/shared/logo.svg";
+import logo from "/assets/shared/logo.svg";
 
 export const Header = () => {
 	return (

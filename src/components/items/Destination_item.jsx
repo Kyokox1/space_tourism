@@ -37,12 +37,12 @@ export const DestinationItem = ({
 			<Image
 				as={motion.img}
 				src={img}
-				boxSize="sm"
+				boxSize={{ lg: "sm", md: "sm", base: "xs" }}
 				animation={animation}
 				alt="destination"
 			/>
 			<Box
-				w={{ lg: "md", md: "xl", base: "xl" }}
+				w={{ lg: "md", md: "xl", base: "100%" }}
 				h={{ lg: "auto", md: "45%", base: "45%" }}
 			>
 				<Box
@@ -59,8 +59,8 @@ export const DestinationItem = ({
 						color="#D0D6F9"
 						letterSpacing="4px"
 						fontWeight="400"
-						colorScheme={"transparent"}
-						padding="0px"
+						colorScheme="transparent"
+						padding="0"
 						_hover={{
 							borderBottom: "#FFFFFF60 solid 2px"
 						}}
@@ -132,7 +132,7 @@ export const DestinationItem = ({
 					fontFamily="Barlow"
 					color="#D0D6F9"
 					m={{ lg: "initial", md: "0 auto", base: "0 auto" }}
-					w={{ lg: "400px", md: "100%", base: "100%" }}
+					w={{ lg: "400px", md: "100%", base: "90%" }}
 					pb="2rem"
 					borderBottom="1px #383B4B solid"
 				>
@@ -140,8 +140,14 @@ export const DestinationItem = ({
 				</Text>
 				<Flex
 					width="sm"
-					justifyContent="space-between"
-					m={{ lg: ".5rem 0 0 0", md: ".5rem auto", base: ".5 auto" }}
+					h={{ lg: "auto", md: "auto", base: "10rem" }}
+					flexDir={{ lg: "row", md: "row", base: "column" }}
+					justifyContent={{
+						lg: "space-between",
+						md: "space-between",
+						base: "space-around"
+					}}
+					m={{ lg: ".5rem 0 0 0", md: ".5rem auto", base: ".5rem auto" }}
 				>
 					<Box>
 						<Text color="#D0D6F9" fontFamily="Barlow Condensed">

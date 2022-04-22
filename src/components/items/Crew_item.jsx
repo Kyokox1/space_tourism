@@ -13,18 +13,18 @@ export const CrewItem = ({
 }) => {
 	return (
 		<Flex
-			flexDir={{ lg: "row", md: "column", base: "column" }}
+			flexDir={{ lg: "row", md: "column", base: "column-reverse" }}
 			alignItems="center"
-			width="86%"
-			height={{ lg: "60vh", md: "80vh", base: "80vh" }}
+			width={{ lg: "86%", md: "86%", base: "100%" }}
+			height={{ lg: "60vh", md: "80vh", base: "100vh" }}
 			m="0 auto"
 			justifyContent="space-evenly"
 		>
 			<Flex
-				flexDir="column"
+				flexDir={{ lg: "column", md: "column", base: "column-reverse" }}
 				width={{ lg: "45%", md: "100%", base: "100%" }}
 				textAlign={{ lg: "inherit", md: "center", base: "center" }}
-				height="inherit"
+				height={{ lg: "hidden", md: "hidden", base: "50%" }}
 				justifyContent={{
 					lg: "space-around",
 					md: "space-evenly",
@@ -32,10 +32,15 @@ export const CrewItem = ({
 				}}
 			>
 				<Flex justifyContent="center" gap="1rem" flexDir="column">
-					<Text color="#D0D6F990" fontSize="3xl">
+					<Text
+						color="#D0D6F990"
+						fontSize={{ lg: "3xl", md: "3xl", base: "xl" }}
+					>
 						{role.toUpperCase()}{" "}
 					</Text>
-					<Text fontSize="5xl">{name.toUpperCase()}</Text>
+					<Text fontSize={{ lg: "5xl", md: "5xl", base: "2xl" }}>
+						{name.toUpperCase()}
+					</Text>
 					<Text
 						color="#D0D6F9"
 						fontFamily="Barlow"
@@ -53,13 +58,14 @@ export const CrewItem = ({
 				/>
 			</Flex>
 			<Image
+				borderBottom="1px #383B4B solid"
 				alignSelf={{ lg: "self-end", md: "auto", base: "auto" }}
 				src={img}
 				objectFit="contain"
 				mb="-5vh"
 				// mb="-6vh"
-				width={{ lg: "75vh", md: "100%" }}
-				height={{ lg: "80vh", md: "45vh" }}
+				width={{ lg: "75vh", md: "100%", base: "100%" }}
+				height={{ lg: "80vh", md: "45vh", base: "280px" }}
 				alt="crew"
 			/>
 		</Flex>
