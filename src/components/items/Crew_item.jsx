@@ -24,12 +24,8 @@ export const CrewItem = ({
 				flexDir={{ lg: "column", md: "column", base: "column-reverse" }}
 				width={{ lg: "45%", md: "100%", base: "100%" }}
 				textAlign={{ lg: "inherit", md: "center", base: "center" }}
-				height={{ lg: "hidden", md: "hidden", base: "50%" }}
-				justifyContent={{
-					lg: "space-around",
-					md: "space-evenly",
-					base: "space-evenly"
-				}}
+				height={{ lg: "inherit", md: "inherit", base: "50%" }}
+				justifyContent="space-evenly"
 			>
 				<Flex justifyContent="center" gap="1rem" flexDir="column">
 					<Text

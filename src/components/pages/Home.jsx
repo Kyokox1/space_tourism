@@ -16,8 +16,9 @@ export const Home = () => {
 				bgSize="cover"
 				color="white"
 				height="100vh"
-				pt={{ lg: "2.5rem", md: "0", base: "0" }}
-				overflowY="hidden"
+				pt={{ lg: "2rem", md: "0", base: "0" }}
+				overflowY={{ lg: "hidden", md: "auto", base: "auto" }}
+				overflowX="hidden"
 			>
 				<Header />
 				<Flex

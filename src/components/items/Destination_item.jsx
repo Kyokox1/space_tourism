@@ -35,7 +35,7 @@ export const DestinationItem = ({
 			textAlign={{ lg: "inherit", md: "center", base: "center" }}
 		>
 			<Image
-				as={motion.img}
+				as={motion.img}b
 				src={img}
 				boxSize={{ lg: "sm", md: "sm", base: "xs" }}
 				animation={animation}
