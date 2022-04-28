@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Box, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 
 export const NavDesktop = () => {
+	const navValues = ["HOME", "DESTINATION", "CREW", "TECHNOLOGY"];
+
 	return (
 		<Box
 			as="nav"
@@ -26,54 +28,20 @@ export const NavDesktop = () => {
 				alignItems="center"
 				letterSpacing="2.7px"
 			>
-				<ListItem>
-					<Link to="/">
-						<Text
-							as="strong"
-							color="white"
-							display={{ lg: "inline", md: "none", base: "none" }}
-						>
-							00
-						</Text>{" "}
-						HOME
-					</Link>
-				</ListItem>
-				<ListItem>
-					<Link to="/destination">
-						<Text
-							as="strong"
-							color="#FFFFFF"
-							display={{ lg: "inline", md: "none", base: "none" }}
-						>
-							01
-						</Text>{" "}
-						DESTINATION
-					</Link>
-				</ListItem>
-				<ListItem>
-					<Link to="/crew">
-						<Text
-							as="strong"
-							color="#FFFFFF"
-							display={{ lg: "inline", md: "none", base: "none" }}
-						>
-							02
-						</Text>{" "}
-						CREW
-					</Link>
-				</ListItem>
-				<ListItem>
-					<Link to="/technology">
-						<Text
-							as="strong"
-							color="#FFFFFF"
-							display={{ lg: "inline", md: "none", base: "none" }}
-						>
-							03
-						</Text>{" "}
-						TECHNOLOGY
-					</Link>
-				</ListItem>
+				{navValues.map((value, i) => (
+					<ListItem key={i}>
+						<Link to={`/${value.toLocaleLowerCase()}`}>
+							<Text
+								as="strong"
+								color="white"
+								display={{ lg: "inline", md: "none", base: "none" }}
+							>
+								0{i}
+							</Text>{" "}
+							{value}
+						</Link>
+					</ListItem>
+				))}
 			</UnorderedList>
 		</Box>
 	);

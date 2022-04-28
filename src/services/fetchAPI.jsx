@@ -1,5 +1,5 @@
 const API = "/data.json"
-// import ss from "./"
+// "/space_tourism/data.json" para deploy
 
 export const fetchApi = async (key) => {
 	try {

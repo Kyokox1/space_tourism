@@ -28,7 +28,7 @@ export const Home = () => {
 					alignItems={{ md: "center", base: "center" }}
 					h={{ lg: "auto", md: "4xl", base: "xl" }}
 					w="100%"
-					m={{ lg: "9.5rem auto 0 auto", md: "1rem auto", base: "0" }}
+					m={{ lg: "7.5rem auto 0 auto", md: "1rem auto", base: "0" }}
 					fontWeight="300"
 					color="#D0D6F9"
 					textAlign={{ lg: "initial", md: "center", base: "center" }}
