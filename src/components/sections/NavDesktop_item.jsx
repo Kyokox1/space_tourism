@@ -29,16 +29,32 @@ export const NavDesktop = () => {
 				letterSpacing="2.7px"
 			>
 				{navValues.map((value, i) => (
-					<ListItem key={i}>
+					<ListItem
+						key={i}
+						borderBottom="3px transparent solid"
+						_hover={{
+							borderBottom: "3px #979797 solid"
+						}}
+					>
 						<Link to={`/${value.toLocaleLowerCase()}`}>
-							<Text
-								as="strong"
-								color="white"
-								display={{ lg: "inline", md: "none", base: "none" }}
+							<Box
+								as="button"
+								height="96px"
+								display="flex"
+								alignItems="center"
+								justifyContent="center"
+								gap="7px"
+								letterSpacing="3.5px"
 							>
-								0{i}
-							</Text>{" "}
-							{value}
+								<Text
+									as="strong"
+									color="white"
+									display={{ lg: "inline", md: "none", base: "none" }}
+								>
+									0{i}
+								</Text>{" "}
+								{value}
+							</Box>
 						</Link>
 					</ListItem>
 				))}
