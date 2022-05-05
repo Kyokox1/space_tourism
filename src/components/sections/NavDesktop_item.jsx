@@ -1,8 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Box, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 
 export const NavDesktop = () => {
+	// const [active, setActive] = useState(""); //*NO es necesario con el Pathname.
+
+	const { pathname } = useLocation();
+	console.log(pathname);
+
 	const navValues = ["HOME", "DESTINATION", "CREW", "TECHNOLOGY"];
 
 	return (
@@ -31,10 +36,21 @@ export const NavDesktop = () => {
 				{navValues.map((value, i) => (
 					<ListItem
 						key={i}
-						borderBottom="3px transparent solid"
-						_hover={{
-							borderBottom: "3px #979797 solid"
-						}}
+						// onClick={e=>setActive(e.target.textContent.slice(3))} //*No es necesario con el Pathname, pero si es otra forma.
+						borderBottom={
+							`/${value.toLocaleLowerCase()}` === pathname ||
+							`${pathname}home` === `/${value.toLocaleLowerCase()}`
+								? "3px #FFFFFF solid"
+								: "3px transparent solid"
+						}
+						_hover={
+							`/${value.toLocaleLowerCase()}` !== pathname &&
+							`${pathname}home` !== `/${value.toLocaleLowerCase()}`
+								? {
+										borderBottom: "3px #979797 solid"
+								  }
+								: null
+						}
 					>
 						<Link to={`/${value.toLocaleLowerCase()}`}>
 							<Box
