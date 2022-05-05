@@ -25,6 +25,8 @@ export const DestinationItem = ({
 
 	const animation = `${animationKeyframes} 50s infinite linear`;
 
+	const planets = ["MOON", "MARS", "EUROPE", "TITAN"];
+
 	return (
 		<Flex
 			width="100vw"
@@ -35,7 +37,8 @@ export const DestinationItem = ({
 			textAlign={{ lg: "inherit", md: "center", base: "center" }}
 		>
 			<Image
-				as={motion.img}b
+				as={motion.img}
+				b
 				src={img}
 				boxSize={{ lg: "sm", md: "sm", base: "xs" }}
 				animation={animation}
@@ -53,78 +56,28 @@ export const DestinationItem = ({
 					justifyContent="space-between"
 					m={{ lg: "initial", md: "0 auto", base: "0 auto" }}
 				>
-					<Button
-						onClick={() => setPlanetValues(0)}
-						autoFocus
-						color="#D0D6F9"
-						letterSpacing="4px"
-						fontWeight="400"
-						colorScheme="transparent"
-						padding="0"
-						_hover={{
-							borderBottom: "#FFFFFF60 solid 2px"
-						}}
-						_focus={{
-							borderBottom: "#FFFFFF solid 2px",
-							color: "#FFFFFF"
-						}}
-					>
-						MOON
-					</Button>
-					<Button
-						onClick={() => setPlanetValues(1)}
-						color="#D0D6F9"
-						letterSpacing="4px"
-						border
-						fontWeight="400"
-						colorScheme={"transparent"}
-						padding="0px"
-						_hover={{
-							borderBottom: "#FFFFFF60 solid 2px"
-						}}
-						_focus={{
-							borderBottom: "#FFFFFF solid 2px",
-							color: "#FFFFFF"
-						}}
-					>
-						MARS
-					</Button>
-					<Button
-						onClick={() => setPlanetValues(2)}
-						color="#D0D6F9"
-						letterSpacing="4px"
-						fontWeight="400"
-						colorScheme={"transparent"}
-						padding="0px"
-						_hover={{
-							borderBottom: "#FFFFFF60 solid 2px"
-						}}
-						_focus={{
-							borderBottom: "#FFFFFF solid 2px",
-							color: "#FFFFFF"
-						}}
-					>
-						EUROPA
-					</Button>
-					<Button
-						onClick={() => setPlanetValues(3)}
-						color="#D0D6F9"
-						letterSpacing="4px"
-						fontWeight="400"
-						colorScheme={"transparent"}
-						padding="0px"
-						_hover={{
-							borderBottom: "#FFFFFF60 solid 2px"
-						}}
-						_focus={{
-							borderBottom: "#FFFFFF solid 2px",
-							color: "#FFFFFF"
-						}}
-					>
-						TITAN
-					</Button>
+					{planets.map((planet, i) => (
+						<Button
+							key={i}
+							onClick={() => setPlanetValues(i)}
+							autoFocus={i === 0}
+							color="#D0D6F9"
+							letterSpacing="4px"
+							fontWeight="400"
+							colorScheme="transparent"
+							padding="0"
+							_hover={{
+								borderBottom: "#FFFFFF60 solid 2px"
+							}}
+							_focus={{
+								borderBottom: "#FFFFFF solid 2px",
+								color: "#FFFFFF"
+							}}
+						>
+							{planet}
+						</Button>
+					))}
 				</Box>
-
 				<Text as="h2" fontFamily="Bellefair" fontSize="7xl">
 					{name.toUpperCase()}
 				</Text>
