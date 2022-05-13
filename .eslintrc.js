@@ -20,6 +20,7 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "no-absolute-path":"on",
         "react/prop-types": "off"
     }
 }

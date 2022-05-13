@@ -6,7 +6,7 @@ export const NavDesktop = () => {
 	// const [active, setActive] = useState(""); //*NO es necesario con el Pathname.
 
 	const { pathname } = useLocation();
-	console.log(pathname);
+	// console.log(pathname);
 
 	const navValues = ["HOME", "DESTINATION", "CREW", "TECHNOLOGY"];
 

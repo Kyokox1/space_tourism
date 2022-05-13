@@ -9,7 +9,7 @@ export const ButtonTechnologyItem = ({
 	return (
 		<Box
 			as="button"
-			autoFocus={index === 0 }
+			autoFocus={index === 0}
 			onClick={slideTechnology}
 			variant="outline"
 			boxSize={{ lg: "5rem", md: "4rem", base: "4rem" }}

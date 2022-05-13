@@ -7,7 +7,7 @@ import {
 	keyframes,
 	Button
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const DestinationItem = ({
 	img,
@@ -36,14 +36,19 @@ export const DestinationItem = ({
 			flexDir={{ lg: "row", md: "column", base: "column" }}
 			textAlign={{ lg: "inherit", md: "center", base: "center" }}
 		>
-			<Image
-				as={motion.img}
-				b
-				src={img}
-				boxSize={{ lg: "sm", md: "sm", base: "xs" }}
-				animation={animation}
-				alt="destination"
-			/>
+			<AnimatePresence>
+				<Image
+					as={motion.img}
+					key={img}
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition="all .5s ease-in-out"
+					src={img}
+					boxSize={{ lg: "sm", md: "sm", base: "xs" }}
+					animation={animation}
+					alt="destination"
+				/>
+			</AnimatePresence>
 			<Box
 				w={{ lg: "md", md: "xl", base: "100%" }}
 				h={{ lg: "auto", md: "45%", base: "45%" }}

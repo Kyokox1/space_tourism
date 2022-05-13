@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Image, Text } from "@chakra-ui/react";
 
 import { RadioCrewItem } from "./Radio_Crew_item";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const CrewItem = ({
 	role,
@@ -47,23 +48,34 @@ export const CrewItem = ({
 					</Text>
 				</Flex>
 				{/* Componente para crear Radios */}
+
 				<RadioCrewItem
 					values={crewValues}
 					setValues={setCrewValues}
 					radios={4}
 				/>
 			</Flex>
-			<Image
-				borderBottom="1px #383B4B solid"
-				alignSelf={{ lg: "self-end", md: "auto", base: "auto" }}
-				src={img}
-				objectFit="contain"
-				mb="-5vh"
-				// mb="-6vh"
-				width={{ lg: "75vh", md: "100%", base: "100%" }}
-				height={{ lg: "80vh", md: "45vh", base: "280px" }}
-				alt="crew"
-			/>
+
+			<AnimatePresence>
+				<motion.div
+					key={img}
+					initial={{ x: 300, opacity: 0 }}
+					animate={{ x: 0, opacity: 1 }}
+					// transition={{ duration: 1, ease: 'easeInOut' }}
+				>
+					<Image
+						borderBottom="1px #383B4B solid"
+						alignSelf={{ lg: "self-end", md: "auto", base: "auto" }}
+						src={img}
+						objectFit="contain"
+						mb="-5vh"
+						// mb="-6vh"
+						width={{ lg: "75vh", md: "100%", base: "100%" }}
+						height={{ lg: "80vh", md: "45vh", base: "280px" }}
+						alt="crew"
+					/>
+				</motion.div>
+			</AnimatePresence>
 		</Flex>
 	);
 };

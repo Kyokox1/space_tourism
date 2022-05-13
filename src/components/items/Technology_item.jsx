@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, keyframes } from "@chakra-ui/react";
 
 import { ButtonTechnologyItem } from "./Button_Technology_item";
+import { AnimatePresence } from "framer-motion";
 
 export const TechnologyItem = ({
 	name,
@@ -10,6 +11,13 @@ export const TechnologyItem = ({
 	imgPortrait,
 	setTechnologyValues
 }) => {
+	const animationLeft = keyframes`
+		0% { transform: scale(1) translateY(100%) }
+		100% { transform: scale(1) translateY(0%) }
+	`;
+
+	const slideLeft = `${animationLeft} .8s ease-out`;
+
 	return (
 		<Flex
 			flexDir={{
@@ -89,13 +97,17 @@ export const TechnologyItem = ({
 				w={{ lg: "70%", md: "inherit", base: "inherit" }}
 			>
 				<source srcSet={imgLandscape} media="(max-width: 990px)" />
-				<Image
-					src={imgPortrait}
-					mt={{ lg: "-4rem", md: "0", base: "0" }}
-					alt="techcology"
-					objectFit="contain"
-					m="0 auto"
-				/>
+				<AnimatePresence>
+					<Image
+						key={imgPortrait}
+						animation={slideLeft}
+						src={imgPortrait}
+						mt={{ lg: "-4rem", md: "0", base: "0" }}
+						alt="techcology"
+						objectFit="contain"
+						m="0 auto"
+					/>
+				</AnimatePresence>
 			</Box>
 		</Flex>
 	);
