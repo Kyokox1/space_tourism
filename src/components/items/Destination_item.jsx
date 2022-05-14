@@ -35,6 +35,7 @@ export const DestinationItem = ({
 			alignItems={{ lg: "normal", md: "center", base: "center" }}
 			flexDir={{ lg: "row", md: "column", base: "column" }}
 			textAlign={{ lg: "inherit", md: "center", base: "center" }}
+			overflowY="hidden"
 		>
 			<AnimatePresence>
 				<Image

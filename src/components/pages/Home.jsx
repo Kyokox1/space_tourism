@@ -17,7 +17,7 @@ export const Home = () => {
 				color="white"
 				height="100vh"
 				pt={{ lg: "2rem", md: "0", base: "0" }}
-				overflowY={{ lg: "hidden", md: "auto", base: "auto" }}
+				overflowY={{ lg: "auto", md: "auto", base: "auto" }}
 				overflowX="hidden"
 			>
 				<Header />
