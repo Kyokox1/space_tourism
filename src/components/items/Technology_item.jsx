@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Flex, Image, Text, keyframes } from "@chakra-ui/react";
 
 import { ButtonTechnologyItem } from "./Button_Technology_item";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const TechnologyItem = ({
 	name,
@@ -12,11 +12,17 @@ export const TechnologyItem = ({
 	setTechnologyValues
 }) => {
 	const animationLeft = keyframes`
+		0% { transform: scale(1) translateX(100%) }
+		100% { transform: scale(1) translateX(0%) }
+	`;
+
+	const animationUp = keyframes`
 		0% { transform: scale(1) translateY(100%) }
 		100% { transform: scale(1) translateY(0%) }
 	`;
 
 	const slideLeft = `${animationLeft} .8s ease-out`;
+	const slideUp = `${animationUp} .8s ease-out`;
 
 	return (
 		<Flex
@@ -99,8 +105,9 @@ export const TechnologyItem = ({
 				<source srcSet={imgLandscape} media="(max-width: 990px)" />
 				<AnimatePresence>
 					<Image
+						as={motion.img}
 						key={imgPortrait}
-						animation={slideLeft}
+						animation={{ lg: slideUp, base: slideLeft }}
 						src={imgPortrait}
 						mt={{ lg: "-4rem", md: "0", base: "0" }}
 						alt="techcology"

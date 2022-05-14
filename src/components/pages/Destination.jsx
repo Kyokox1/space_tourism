@@ -24,8 +24,10 @@ export const Destination = () => {
 			bgSize="cover"
 			color="white"
 			height="100vh"
+			w="100vw"
 			pt={{ lg: "2rem", md: "0", base: "0" }}
-			overflowY={{ lg: "auto", md: "auto", base: "auto" }}
+			// overflowY={{ lg: "auto", md: "auto", base: "auto" }}
+			overflowY="auto"
 			overflowX="hidden"
 		>
 			<Header />

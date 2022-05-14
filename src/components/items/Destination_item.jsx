@@ -30,26 +30,20 @@ export const DestinationItem = ({
 	return (
 		<Flex
 			width="100vw"
-			height={{ lg: "auto", md: "85vh", base: "85vh" }}
+			height={{ lg: "auto", base: "85vh" }}
 			justifyContent="space-evenly"
-			alignItems={{ lg: "normal", md: "center", base: "center" }}
+			alignItems={{ lg: "normal", base: "center" }}
 			flexDir={{ lg: "row", md: "column", base: "column" }}
-			textAlign={{ lg: "inherit", md: "center", base: "center" }}
-			overflowY="hidden"
+			textAlign={{ lg: "inherit", base: "center" }}
+			overflowY={{ lg: "hidden", base: "visible" }}
 		>
-			<AnimatePresence>
-				<Image
-					as={motion.img}
-					key={img}
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition="all .5s ease-in-out"
-					src={img}
-					boxSize={{ lg: "sm", md: "sm", base: "xs" }}
-					animation={animation}
-					alt="destination"
-				/>
-			</AnimatePresence>
+			<Image
+				as={motion.img}
+				src={img}
+				boxSize={{ lg: "sm", md: "sm", base: "xs" }}
+				animation={animation}
+				alt="destination"
+			/>
 			<Box
 				w={{ lg: "md", md: "xl", base: "100%" }}
 				h={{ lg: "auto", md: "45%", base: "45%" }}
@@ -60,7 +54,7 @@ export const DestinationItem = ({
 					boxSizing="border-box"
 					display="flex"
 					justifyContent="space-between"
-					m={{ lg: "initial", md: "0 auto", base: "0 auto" }}
+					m={{ lg: "initial", base: "0 auto" }}
 				>
 					{planets.map((planet, i) => (
 						<Button
